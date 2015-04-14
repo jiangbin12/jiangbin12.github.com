@@ -1,0 +1,270 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* ============================= Candidate ============================ */
+.page_paginate .page_title
+{
+	width: 100%;
+	overflow: hidden;
+}
+
+.appt .appt_left
+{
+	width: 900px;
+}
+
+.appt .interview_bar
+{
+	margin-top: 45px;
+}
+
+
+/* ============================= Employer ============================ */
+.all-blocks
+{
+	margin-top: -25px;
+}
+
+.all-blocks .thickbar
+{
+	margin: 15px auto;
+	padding: 0;
+	height: 3px;
+	width: 885px;
+	background-color: #4b5256;
+}
+
+.all-blocks .block
+{
+	margin-bottom: 30px;
+	border: none;
+}
+
+.info1, .info2, .info3
+{
+	width: 100%;
+}
+
+.info3
+{
+	margin: 0 0 25px 0;
+	left: 0;
+	width: 827px;
+}
+
+.profile-info
+{
+	width: 800px;
+}
+
+.interview-time
+{
+	color: #eeeeee;
+}
+
+.conf_infoleft
+{
+	margin: 0 15px 0 0;
+	padding: 0 15px 0 0;
+	color: #eeeeee;
+	border-right: 1px solid #a1d7eb;
+	float: left;
+}
+
+.conf_inforight
+{
+	margin: 0;
+	padding: 0;
+	color: #c1cacf;
+	text-transform: uppercase;
+	float: left;
+}
+
+.wrapper .time_elapsed
+{
+	margin-top: 0;
+}
+
+/* ============================= Both ============================ */
+.conf_area
+{
+	margin: auto;
+	height: 515px;
+	width: 850px;
+}
+
+.coy_name
+{
+	margin-bottom: 10px;
+	margin-left: 0;
+	width: 700px;
+	text-align: left;
+	float: left;
+}
+
+.time_elapsed
+{
+	margin: 20px 0 10px 0;
+	padding: 0;
+	width: 110px;
+	font-family:'mulireg', Verdana, sans-serif;
+	float: right;
+}
+
+.time_elapsed .elapse_left
+{
+	margin: 0;
+	padding: 0;
+	color: #c1cacf;
+	float: left;
+}
+
+.time_elapsed .elapse_right
+{
+	margin: 0 0 0 15px;
+	padding: 0;
+	color: #eeeeee;
+	text-align: right;
+	float: left;
+}
+
+.cam_big, .cam_small
+{
+	margin: 0;
+	padding: 0;
+	border: 3px solid #5c5c5c;
+	background-color: #212629;
+	background-image: url(../pics/frontend/ico_pending.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	float: left;
+	overflow: hidden;
+}
+
+.cam_right
+{
+	margin: -1px 0 0 1px;
+	padding: 0;
+	width: 209px;
+	height: 356px;
+	float: left;
+}
+
+.cam_big
+{
+	width: 633px;
+	height: 356px;
+	background-size: 100px 100px;
+}
+
+.cam_small
+{
+	margin-top: 1px;
+	width: 209px;
+	height: 118px;
+	background-size: 50px 50px;
+}
+
+.cam_label
+{
+	margin: 0;
+	padding: 3px;
+	width: 26px;
+	height: 26px;
+	text-align: center;
+	background-color: #4b5256;
+	color: #ffffff;
+    font-family: 'nexabold';
+	font-size: 16px;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	-ms-filter: alpha(opacity=90);
+	-webkit-filter: alpha(opacity=90);
+	-moz-filter: alpha(opacity=90);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	position: relative;
+}
+
+.cam_A
+{
+	top: -358px;
+	left: 5px;
+}
+
+.cam_BCD
+{
+	top: -120px;
+	left: 5px;
+}
+
+.cam_controls
+{
+	margin: 25px 0 0 0;
+	padding: 0;
+	width: 843px;
+}
+
+.cam_controls .button
+{
+	margin-right: 0;
+	margin-left: 10px;
+	float: right;
+	cursor: pointer;
+}
+
+.cam_icon
+{
+	margin: 0 10px 0 0;
+	padding: 0;
+	width: 42px;
+	height: 42px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 42px 42px;
+	float: left;
+}
+
+.cam_video
+{
+	background-image: url(../pics/frontend/ico_video1.png);
+}
+
+.cam_video:hover
+{
+	background-image: url(../pics/frontend/ico_video2.png);
+}
+
+.cam_audio
+{
+	background-image: url(../pics/frontend/ico_audio1.png);
+}
+
+.cam_audio:hover
+{
+	background-image: url(../pics/frontend/ico_audio2.png);
+}
+
+.cam_video_blind
+{
+	background-image: url(../pics/frontend/ico_video2.png);
+}
+
+.cam_video_blind:hover
+{
+	background-image: url(../pics/frontend/ico_video1.png);
+}
+
+.cam_audio_muted
+{
+	background-image: url(../pics/frontend/ico_audio2.png);
+}
+
+.cam_audio_muted:hover
+{
+	background-image: url(../pics/frontend/ico_audio1.png);
+}

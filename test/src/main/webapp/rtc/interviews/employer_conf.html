@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multiparty Chatroom</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="/easyrtc/easyrtc.css"/>
+
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<script type="text/javascript" src="/easyrtc/easyrtc.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="/conf.js"></script>
+
+	<!-- from template -->
+	<link href="../assets/css/style.css" type="text/css" rel="stylesheet"/>
+	<link href="../assets/css/flexslider.css" type="text/css" rel="stylesheet">
+	<link href="../assets/css/slick.css" type="text/css" rel="stylesheet">
+	<link href="../assets/css/employer.css" type="text/css" rel="stylesheet">
+	<link href="../assets/css/conference.css" type="text/css" rel="stylesheet"/>
+	<!-- from template - end -->
+
+</head>
+
+<body onload="appInit('{{interviewId}}','{{username}}', true)">
+<div id="fullpage" class="boxCommon" style="background-image:url(images/irongrip.png)">
+</div>
+<div id="textentryBox" onsubmit="sendText()" style="display:none">
+	<input type="text" id="textentryField" class="transit boxcommon"/><br/>
+	<button id="textentrySubmit" style="float:right;margin-right:1em" onclick="sendText()">Send</button>
+	<button id="textentryCancel" style="float:left;margin-left:1em" onclick="cancelText()">Cancel</button>
+</div>
+<img id="killButton" class="transit boxCommon" onclick="killActiveBox()" src="images/button_close.png" style="display:none;z-index:3" alt="close button"/>
+<img id="muteButton" class="transit boxCommon" onclick="muteActiveBox()" src="images/button_mute.png" style="display:none;z-index:3" alt="mute button"/>
+<img id="textEntryButton" class="transit boxCommon" onclick="showTextEntry()" src="images/textEntry.png" style="z-index:3;display:none" alt="text button"/>
+
+<div style="margin: 0" class="conf_area">
+	<div class="coy_name">
+		<!--17 Dec 14, 1600 hr (GMT +8)-->
+		<!--Waiting for Candidate-->
+		<span class="conf_infoleft">{{time}}</span><span class="conf_inforight" id="conf_status"></span>
+	</div>
+
+	<div class="time_elapsed">
+		<span class="elapse_left">Time</span><span class="elapse_right" id="time" >00:00:00</span>
+	</div>
+
+	<div class="cam_big">
+		<!-- Replace this image with the camera feed -->
+		<!--<img src="../assets/pics/frontend/_temppic_conf.jpg" width="633" height="356">-->
+		<video id="box3" class="transit boxCommon thumbCommon" width="633" style="visibility:hidden"></video>
+		<div class="cam_label cam_A">A</div>
+	</div>
+
+	<div class="cam_right">
+		<div class="cam_small">
+			<!-- Replace this image with the camera feed -->
+			<!--<img src="../assets/pics/frontend/_temppic_conf.jpg" width="209" height="118">-->
+			<video id="box1" class="transit boxCommon thumbCommon" width="209" style="visibility:hidden"></video>
+			<div class="cam_label cam_BCD">B</div>
+		</div>
+
+		<div class="cam_small">
+			<!-- Replace this image with the camera feed -->
+			<!--<img src="../assets/pics/frontend/_temppic_conf.jpg" width="209" height="118">-->
+			<video id="box2" class="transit boxCommon thumbCommon" width="209" style="visibility:hidden"></video>
+			<div class="cam_label cam_BCD">C</div>
+		</div>
+
+		<div class="cam_small">
+			<!-- Replace this image with the camera feed
+			<img src="../assets/pics/frontend/_temppic_conf.jpg" width="209" height="118"> -->
+			<video id="box0" class="transit boxCommon thumbCommon easyRTCMirror" width="209" muted="muted" volume="0"></video>
+			<div class="cam_label cam_BCD">D</div>
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	<div class="cam_controls">
+		<!--<a href="">-->
+		<div id="video_button" class="cam_icon cam_video" onclick="toggleBlindAll()"></div>
+		<!--</a>-->
+		<!--<a href="">-->
+		<div id="audio_button" class="cam_icon cam_audio" onclick="toggleMuteAll()"></div>
+		<!--</a>-->
+
+		<button type="button" name="" class="button" id="">DECLINE</button>
+		<!--	           	<button type="button" name="" class="button" id="">STOP</button>
+							<button type="button" name="" class="button" id="">COMPLETED</button>
+							<button type="button" name="" class="button" id="">START AGAIN</button>
+							<button type="button" name="" class="button" id="">OFFER JOB</button>
+							<button type="button" name="" class="button" id="">REJECT</button>
+		-->
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/easyrtc/easyrtc.css" />
+		<script src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="/easyrtc/easyrtc.js"></script>
+		<script type="text/javascript" src="/mylogic.js"></script>
+
+		<!-- from template -->
+		<link href="../assets/css/style.css" type="text/css" rel="stylesheet"/>
+		<link href="../assets/css/flexslider.css" type="text/css" rel="stylesheet">
+		<link href="../assets/css/slick.css" type="text/css" rel="stylesheet">
+		<link href="../assets/css/employer.css" type="text/css" rel="stylesheet">
+		<link href="../assets/css/conference.css" type="text/css" rel="stylesheet"/>
+		<!-- from template - end -->
+
+	</head>
+	<body onload="my_init('{{interviewId}}')">
+		<!--<video style="float:left" id="self" width="300" height="200" muted="muted"></video>-->
+		<div id="otherClients" width="633" height="356"></div>
+		<!-- from template -->
+		<div class="conf_area">
+			<div class="coy_name">
+				<span class="conf_infoleft">17 Dec 14, 1600 hr (GMT +8)</span><span class="conf_inforight">Waiting for Candidate</span>
+			</div>
+
+			<div class="time_elapsed">
+				<span class="elapse_left">Time</span><span class="elapse_right">00:00:00</span>
+			</div>
+
+			<div class="cam_big">
+				<!-- Replace this image with the camera feed -->
+				<!--<img src="../assets/pics/frontend/_temppic_conf.jpg" width="633" height="356">-->
+				<!--<div style="position:relative;float:left;width:633px">-->
+				<!--</div>-->
+				<video id="caller1" width="633" height="356"></video>
+				<div class="cam_label cam_A">A</div>
+			</div>
+
+			<div class="cam_right">
+				<div class="cam_small">
+					<!-- Replace this image with the camera feed -->
+					<!--<img src="../assets/pics/frontend/_temppic_conf.jpg" width="209" height="118">-->
+					<video id="caller2" width="633" height="356"></video>
+					<div class="cam_label cam_BCD">B</div>
+				</div>
+
+				<div class="cam_small">
+					<!-- Replace this image with the camera feed -->
+					<!--<img src="../assets/pics/frontend/_temppic_conf.jpg" width="209" height="118">-->
+					<video id="caller3" width="633" height="356"></video>
+					<div class="cam_label cam_BCD">C</div>
+				</div>
+
+				<div class="cam_small">
+					<!-- Replace this image with the camera feed
+					<img src="../assets/pics/frontend/_temppic_conf.jpg" width="209" height="118"> -->
+					<video id="self" width="209" height="118" muted="muted"></video>
+					<div class="cam_label cam_BCD">D</div>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+
+			<div class="cam_controls">
+				<a href=""><div class="cam_icon cam_video"></div></a>
+				<a href=""><div class="cam_icon cam_audio"></div></a>
+
+				<button type="button" name="" class="button" id="">DECLINE</button>
+				<!--	           	<button type="button" name="" class="button" id="">STOP</button>
+									<button type="button" name="" class="button" id="">COMPLETED</button>
+									<button type="button" name="" class="button" id="">START AGAIN</button>
+									<button type="button" name="" class="button" id="">OFFER JOB</button>
+									<button type="button" name="" class="button" id="">REJECT</button>
+				-->
+			</div>
+		</div>
+		<!-- from template - end -->
+	</body>
+</html>
